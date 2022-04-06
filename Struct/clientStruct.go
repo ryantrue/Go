@@ -11,7 +11,7 @@ type Client struct {
 	Id int
 	Name string
 	Age int
-	IMG Avatar
+	IMG *Avatar
 }
 
 func main() {
@@ -19,6 +19,9 @@ func main() {
 	_ = i
 
 	client := Client{}
+	client.IMG = new(Avatar)
+	client.IMG = &Avatar{}
+	
 	updateAvatar(&client)
 fmt.Printf("%#v\n", client)
 }
